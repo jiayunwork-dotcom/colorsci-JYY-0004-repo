@@ -62,8 +62,8 @@ func DeltaE2000(x, y Lab) float64 {
 	cbar := (c1 + c2) / 2
 	g := 0.5 * (1 - math.Sqrt(math.Pow(cbar, 7)/(math.Pow(cbar, 7)+math.Pow(25, 7))))
 
-	a1 := AdaptLabA(x.A, g)
-	a2 := AdaptLabA(y.A, g)
+	a1 := (1 + g) * x.A
+	a2 := (1 + g) * y.A
 	cp1 := math.Hypot(a1, x.B)
 	cp2 := math.Hypot(a2, y.B)
 

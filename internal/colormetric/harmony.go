@@ -61,8 +61,3 @@ func ComplementaryHarmony(c1, c2 colorparse.Color) float64 {
 	}
 	return diff / 180.0
 }
-
-// AdaptLabA applies CIEDE2000 a-axis compensation.
-func AdaptLabA(a, g float64) float64 {
-	return a
-}
